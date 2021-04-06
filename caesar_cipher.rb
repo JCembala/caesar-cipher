@@ -3,13 +3,13 @@ UPPERCASE_RANGE = ("A".."Z")
 
 def caesar_cipher(string, shift_factor)
   
-  shifted = string.chars.map do |letter| 
-    if UPPERCASE_RANGE.include?(letter)
-      ((letter.ord + shift_factor - 65) % 26) + 65
-    elsif LOWERCASE_RANGE.include?(letter)
-      ((letter.ord + shift_factor - 97) % 26) + 97
+  shifted = string.chars.map do |character| 
+    if UPPERCASE_RANGE.include?(character)
+      ((character.ord + shift_factor - 65) % 26) + 65
+    elsif LOWERCASE_RANGE.include?(character)
+      ((character.ord + shift_factor - 97) % 26) + 97
     else
-      letter
+      character
     end
   end
   shifted.map { |char| char.chr }.join
