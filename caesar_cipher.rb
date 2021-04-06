@@ -12,7 +12,7 @@ def caesar_cipher(string, shift_factor)
       letter
     end
   end
-  shifted.map { |char| char = char.chr }.join
+  shifted.map { |char| char.chr }.join
 end
 
 puts caesar_cipher("This is secret! Shhhh...", 5)
